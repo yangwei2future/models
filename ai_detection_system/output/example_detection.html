@@ -1,0 +1,24 @@
+
+        <!DOCTYPE html>
+        <html lang="zh-CN">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>AI代码检测报告</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 20px; }
+                .header { background-color: #f0f0f0; padding: 20px; border-radius: 5px; }
+                .stats { display: flex; justify-content: space-around; margin: 20px 0; }
+                .stat-box { background-color: #e8f4f8; padding: 15px; border-radius: 5px; text-align: center; }
+                .file-result { margin: 20px 0; border: 1px solid #ddd; border-radius: 5px; }
+                .file-header { background-color: #f8f9fa; padding: 10px; font-weight: bold; }
+                .line-result { padding: 5px 10px; border-bottom: 1px solid #eee; }
+                .ai-line { background-color: #ffe6e6; }
+                .human-line { background-color: #e6ffe6; }
+                .prob-high { color: #d32f2f; font-weight: bold; }
+                .prob-medium { color: #ff9800; }
+                .prob-low { color: #4caf50; }
+            </style>
+        </head>
+        <body>
+        <div class='header'><h1>AI代码检测报告</h1><p><strong>检测时间:</strong> 2025-06-21T22:15:42.428898</p><p><strong>模型类型:</strong> Enhanced CodeBERT-based AI Detector</p></div><div class='stats'><div class='stat-box'><h3>1</h3><p>总文件数</p></div><div class='stat-box'><h3>104</h3><p>总代码行数</p></div><div class='stat-box'><h3>103</h3><p>AI生成行数</p></div><div class='stat-box'><h3>99.0%</h3><p>AI代码比例</p></div></div><h2>详细结果</h2><div class='file-result'><div class='file-header'>example_test.py</div><p>代码行数: 104 | AI行数: 103 | AI比例: 99.0%</p><div class='line-result ai-line'><span>行1</span> <span class='prob-high'>概率: 0.740</span> <code>#!/usr/bin/env python3</code></div><div class='line-result ai-line'><span>行2</span> <span class='prob-medium'>概率: 0.516</span> <code>&quot;&quot;&quot;</code></div><div class='line-result ai-line'><span>行3</span> <span class='prob-medium'>概率: 0.679</span> <code>示例测试文件</code></div><div class='line-result ai-line'><span>行4</span> <span class='prob-medium'>概率: 0.659</span> <code>包含人工编写和AI生成风格的代码，用于演示模块化检测系统</code></div><div class='line-result ai-line'><span>行5</span> <span class='prob-medium'>概率: 0.574</span> <code>&quot;&quot;&quot;</code></div><div class='line-result ai-line'><span>行7</span> <span class='prob-high'>概率: 0.756</span> <code>def simple_add(a, b):</code></div><div class='line-result ai-line'><span>行8</span> <span class='prob-high'>概率: 0.851</span> <code>    return a + b</code></div><div class='line-result ai-line'><span>行10</span> <span class='prob-high'>概率: 0.789</span> <code>def calculate_fibonacci_with_comprehensive_error_handling(n: int) -&gt; int:</code></div><div class='line-result ai-line'><span>行11</span> <span class='prob-medium'>概率: 0.548</span> <code>    &quot;&quot;&quot;</code></div><div class='line-result ai-line'><span>行12</span> <span class='prob-high'>概率: 0.778</span> <code>    Calculate fibonacci number with comprehensive error handling and validation.</code></div><div class='line-result ai-line'><span>行14</span> <span class='prob-high'>概率: 0.784</span> <code>    This function implements the fibonacci sequence calculation with robust</code></div><div class='line-result ai-line'><span>行15</span> <span class='prob-high'>概率: 0.883</span> <code>    error handling mechanisms to ensure proper input validation and type safety.</code></div><div class='line-result ai-line'><span>行17</span> <span class='prob-high'>概率: 0.800</span> <code>    Args:</code></div><div class='line-result ai-line'><span>行18</span> <span class='prob-high'>概率: 0.843</span> <code>        n (int): The position in the fibonacci sequence to calculate.</code></div><div class='line-result ai-line'><span>行19</span> <span class='prob-high'>概率: 0.840</span> <code>                Must be a non-negative integer value.</code></div><div class='line-result ai-line'><span>行21</span> <span class='prob-high'>概率: 0.814</span> <code>    Returns:</code></div><div class='line-result ai-line'><span>行22</span> <span class='prob-high'>概率: 0.868</span> <code>        int: The fibonacci number at position n in the sequence.</code></div><div class='line-result ai-line'><span>行24</span> <span class='prob-high'>概率: 0.795</span> <code>    Raises:</code></div><div class='line-result ai-line'><span>行25</span> <span class='prob-high'>概率: 0.809</span> <code>        TypeError: If the input parameter is not of integer type.</code></div><div class='line-result ai-line'><span>行26</span> <span class='prob-high'>概率: 0.782</span> <code>        ValueError: If the input parameter is a negative integer.</code></div><p><em>... 还有 84 行</em></p></div></body></html>
