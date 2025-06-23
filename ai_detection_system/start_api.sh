@@ -89,13 +89,20 @@ check_python() {
         exit 1
     fi
     
-    PYTHON_VERSION=$(python -c "import sys; print(f'{sys.version_info.major}.{sys.version_info.minor}')")
+    # 获取Python版本信息
+    PYTHON_MAJOR=$(python -c "import sys; print(sys.version_info.major)")
+    PYTHON_MINOR=$(python -c "import sys; print(sys.version_info.minor)")
+    PYTHON_VERSION="$PYTHON_MAJOR.$PYTHON_MINOR"
+    
     echo -e "${GREEN}✅ Python版本: $PYTHON_VERSION${NC}"
     
-    if [[ $(echo "$PYTHON_VERSION < 3.8" | bc -l) -eq 1 ]]; then
-        echo -e "${RED}❌ Python版本过低！需要Python 3.8+${NC}"
+    # 检查版本是否满足要求 (>=3.8)
+    if [[ $PYTHON_MAJOR -lt 3 ]] || [[ $PYTHON_MAJOR -eq 3 && $PYTHON_MINOR -lt 8 ]]; then
+        echo -e "${RED}❌ Python版本过低！需要Python 3.8+，当前版本: $PYTHON_VERSION${NC}"
         exit 1
     fi
+    
+    echo -e "${GREEN}✅ Python版本检查通过${NC}"
 }
 
 # 检查依赖
